@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="order"
+            type="com.sammy.miniecommerce.models.Order" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/lyt_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_xmedium"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/product_image"
+            loadImageFromUrl="@{order.products[0].images[0]}"
+            android:layout_width="@dimen/prod_img_width"
+            android:layout_height="@dimen/prod_img_height"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@null"
+            android:padding="@dimen/spacing_small"
+            android:scaleType="fitCenter"
+            tools:src="@drawable/logo" />
+
+        <View
+            android:layout_width="@dimen/spacing_small"
+            android:layout_height="0dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:singleLine="true"
+                android:textAppearance="@style/Custom.Body"
+                android:text="@{order.orderNumber}"
+                android:textColor="@color/grey_90"/>
+
+            <TextView
+                android:id="@+id/tv_product_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{`GHS ` + order.totalAmount}"
+                android:textAppearance="@style/Custom.Body.Bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_items"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{`No. of items: ` + order.products.size()}"
+                        android:textAppearance="@style/Custom.Body.Bold" />
+
+                    <TextView
+                        android:id="@+id/tv_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{order.status.toUpperCase()}"
+                        android:textAppearance="@style/Custom.Body.Bold"
+                        android:textColor="@color/white"
+                        android:padding="@dimen/spacing_medium"
+                        applyStatusColor="@{order.status}"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTrack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:text="@string/track"
+                    android:visibility="@{order.status == `completed` ? View.GONE : View.VISIBLE}"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

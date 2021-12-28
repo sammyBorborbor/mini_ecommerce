@@ -65,5 +65,9 @@
         android:id="@+id/cartFragment"
         android:name="com.sammy.miniecommerce.ui.fragments.cart.CartFragment"
         android:label="CartFragment" />
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.sammy.miniecommerce.ui.fragments.orders.OrdersFragment"
+        android:label="@string/orders" />
 
 </navigation>

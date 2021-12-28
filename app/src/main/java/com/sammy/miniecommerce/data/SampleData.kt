@@ -2,6 +2,7 @@ package com.sammy.miniecommerce.data
 
 import androidx.lifecycle.MutableLiveData
 import com.sammy.miniecommerce.R
+import com.sammy.miniecommerce.models.Order
 import com.sammy.miniecommerce.models.Product
 import com.sammy.miniecommerce.models.ProductCategory
 
@@ -126,6 +127,21 @@ class SampleData {
 
             categoryList.value = listOf(c1, c2, c3, c4, c5, c6)
             return categoryList
+        }
+
+        fun loadOrders(): MutableLiveData<List<Order>> {
+            val orderList: MutableLiveData<List<Order>> = MutableLiveData()
+            val order1 = Order(orderNumber = "#00012345", orderDate = "12 Dec 2021", totalAmount = 250.00,
+            products = loadProducts().value!!.take(5), status = "pending")
+
+            val order2 = Order(orderNumber = "#00012378", orderDate = "18 Dec 2021", totalAmount = 250.00,
+                products = loadProducts().value!!.takeLast(3), status = "in progress")
+
+            val order3 = Order(orderNumber = "#00012367", orderDate = "22 Dec 2021", totalAmount = 250.00,
+                products = loadProducts().value!!.take(2), status = "completed")
+
+            orderList.value = listOf(order1, order2, order3)
+            return orderList
         }
 
 

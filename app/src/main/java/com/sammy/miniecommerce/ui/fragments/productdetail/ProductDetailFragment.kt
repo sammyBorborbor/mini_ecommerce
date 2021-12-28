@@ -21,6 +21,7 @@ import com.sammy.miniecommerce.R
 import com.sammy.miniecommerce.adapters.ImagesAdapter
 import com.sammy.miniecommerce.databinding.ProductDetailFragmentBinding
 import com.sammy.miniecommerce.models.Product
+import com.sammy.miniecommerce.ui.fragments.ShareProductFragment
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
 import com.smarteist.autoimageslider.SliderAnimations
 import java.io.File
@@ -81,49 +82,6 @@ class ProductDetailFragment : Fragment() {
 
     }
 
-    private fun shareProductQrCode(qrImage: ImageView) {
-        val bitmap = (qrImage.drawable as BitmapDrawable).bitmap
-        try {
-            val shareBody = getString(R.string.hey_there) + product?.price
-            val sharingIntent = Intent(Intent.ACTION_SEND)
-            sharingIntent.type = "image/*"
-            sharingIntent.putExtra(Intent.EXTRA_STREAM, getLocalBitmapUri(bitmap))
-            sharingIntent.putExtra(Intent.EXTRA_SUBJECT, product?.name)
-            sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody)
-            sharingIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-            startActivity(Intent.createChooser(sharingIntent, getString(R.string.share_via)))
-        } catch (e: Exception) {
-            e.printStackTrace()
-            Toast.makeText(requireContext(), getString(R.string.error_occurred), Toast.LENGTH_SHORT)
-                .show()
-        }
-    }
-
-    private fun getLocalBitmapUri(bitmap: Bitmap): Uri? {
-        var bmpUri: Uri? = null
-        try {
-            val file = File(
-                requireContext().getExternalFilesDir(Environment.DIRECTORY_PICTURES),
-                "share_image_" + System.currentTimeMillis() + ".png"
-            )
-            val out = FileOutputStream(file)
-            bitmap.compress(Bitmap.CompressFormat.PNG, 90, out)
-            out.close()
-            bmpUri = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                FileProvider.getUriForFile(
-                    requireContext(),
-                    BuildConfig.APPLICATION_ID + ".provider",
-                    file
-                )
-            } else {
-                Uri.fromFile(file)
-            }
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
-        return bmpUri
-    }
-
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
@@ -138,7 +96,11 @@ class ProductDetailFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.action_share -> {
-//                shareProductQrCode(binding.productImage)
+                val shareProductFragment = ShareProductFragment(product)
+                shareProductFragment.show(
+                    activity!!.supportFragmentManager,
+                    shareProductFragment.tag
+                )
                 return true
             }
             R.id.action_cart -> {

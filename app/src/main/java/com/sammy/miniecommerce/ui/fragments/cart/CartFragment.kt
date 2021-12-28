@@ -50,7 +50,6 @@ class CartFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
 
-        viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
         lifecycleScope.launch {
             viewModel.getProducts().observe(viewLifecycleOwner, { list ->
                 cartAdapter = CartAdapter(requireContext(), list)

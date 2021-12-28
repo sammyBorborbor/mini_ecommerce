@@ -36,7 +36,7 @@
         <item name="colorButtonNormal">@color/primaryColor</item>
         <item name="android:textSize">@dimen/font_12</item>
         <item name="android:textColor">@color/grey_40</item>
-        <item name="android:textStyle">bold</item>
+<!--        <item name="android:textStyle">bold</item>-->
         <item name="textAllCaps">false</item>
         <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Button</item>
     </style>
@@ -91,5 +91,14 @@
         <item name="sliderAutoCycleDirection">back_and_forth</item>
         <item name="sliderAutoCycleEnabled">true</item>
     </style>
+
+    <style name="EditText.Default" parent="Theme.MaterialComponents">
+        <item name="android:textColorHint">@color/primaryColor</item>
+        <item name="android:textColor">@color/grey_90</item>
+        <item name="android:textSize">@dimen/font_12</item>
+        <item name="android:padding">@dimen/spacing_large</item>
+        <item name="android:background">@drawable/edit_text_bg</item>
+    </style>
+
 
 </resources>

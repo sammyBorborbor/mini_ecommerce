@@ -9,4 +9,8 @@
         android:title="@string/categories"
         android:icon="@drawable/ic_category"/>
 
+    <item android:id="@+id/ordersFragment"
+        android:title="@string/orders"
+        android:icon="@drawable/ic_orders"/>
+
 </menu>

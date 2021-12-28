@@ -3,7 +3,28 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Projects/android-projects/mini-ecommerce/app/src/main/res/drawable/category_bg.xml" value="0.18055555555555555" />
+        <entry key="..\:/Projects/android-projects/mini-ecommerce/app/src/main/res/drawable/ic_cart.xml" value="0.18055555555555555" />
+        <entry key="..\:/Projects/android-projects/mini-ecommerce/app/src/main/res/drawable/ic_new.xml" value="0.18055555555555555" />
+        <entry key="..\:/Projects/android-projects/mini-ecommerce/app/src/main/res/drawable/ic_share.xml" value="0.18055555555555555" />
         <entry key="..\:/Projects/android-projects/mini-ecommerce/app/src/main/res/layout/activity_main.xml" value="0.1953125" />
+        <entry key="..\:/Projects/android-projects/mini-ecommerce/app/src/main/res/layout/activity_splash.xml" value="0.209375" />
+        <entry key="..\:/Projects/android-projects/mini-ecommerce/app/src/main/res/layout/all_products_fragment.xml" value="0.209375" />
+        <entry key="..\:/Projects/android-projects/mini-ecommerce/app/src/main/res/layout/cart_fragment.xml" value="0.209375" />
+        <entry key="..\:/Projects/android-projects/mini-ecommerce/app/src/main/res/layout/cart_list_item.xml" value="0.209375" />
+        <entry key="..\:/Projects/android-projects/mini-ecommerce/app/src/main/res/layout/category_fragment.xml" value="0.209375" />
+        <entry key="..\:/Projects/android-projects/mini-ecommerce/app/src/main/res/layout/category_list_item.xml" value="0.209375" />
+        <entry key="..\:/Projects/android-projects/mini-ecommerce/app/src/main/res/layout/home_fragment.xml" value="0.209375" />
+        <entry key="..\:/Projects/android-projects/mini-ecommerce/app/src/main/res/layout/image_list_item.xml" value="0.209375" />
+        <entry key="..\:/Projects/android-projects/mini-ecommerce/app/src/main/res/layout/new_arrival_list_item.xml" value="0.209375" />
+        <entry key="..\:/Projects/android-projects/mini-ecommerce/app/src/main/res/layout/new_arrivals_fragment.xml" value="0.209375" />
+        <entry key="..\:/Projects/android-projects/mini-ecommerce/app/src/main/res/layout/product_detail_fragment.xml" value="0.209375" />
+        <entry key="..\:/Projects/android-projects/mini-ecommerce/app/src/main/res/layout/product_list_item.xml" value="0.209375" />
+        <entry key="..\:/Projects/android-projects/mini-ecommerce/app/src/main/res/layout/products_fragment.xml" value="0.209375" />
+        <entry key="..\:/Projects/android-projects/mini-ecommerce/app/src/main/res/layout/topcategories_fragment.xml" value="0.209375" />
+        <entry key="..\:/Projects/android-projects/mini-ecommerce/app/src/main/res/menu/bottom_nav_menu.xml" value="0.209375" />
+        <entry key="..\:/Projects/android-projects/mini-ecommerce/app/src/main/res/menu/home_menu.xml" value="0.209375" />
+        <entry key="..\:/Projects/android-projects/mini-ecommerce/app/src/main/res/menu/product_menu.xml" value="0.209375" />
       </map>
     </option>
   </component>

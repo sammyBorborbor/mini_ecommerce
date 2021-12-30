@@ -13,8 +13,7 @@
         tools:replace="android:theme">
         <activity
             android:name=".ui.activities.AuthActivity"
-            android:exported="true"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
+            android:exported="true" />
         <activity
             android:name=".ui.activities.SplashActivity"
             android:exported="true"

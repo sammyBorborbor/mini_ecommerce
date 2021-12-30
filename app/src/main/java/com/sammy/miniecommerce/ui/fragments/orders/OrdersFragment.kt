@@ -20,6 +20,7 @@ import com.sammy.miniecommerce.databinding.OrdersFragmentBinding
 import com.sammy.miniecommerce.ui.activities.MainActivity
 import com.sammy.miniecommerce.ui.fragments.home.HomeViewModel
 import com.sammy.miniecommerce.utils.LineItemDecoration
+import com.sammy.miniecommerce.utils.SpacingItemDecoration
 import kotlinx.coroutines.launch
 
 class OrdersFragment : Fragment() {
@@ -68,6 +69,7 @@ class OrdersFragment : Fragment() {
     private fun setUpRecyclerView() {
         binding.recyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        binding.recyclerView.addItemDecoration(SpacingItemDecoration(1, 20, false))
         binding.recyclerView.addItemDecoration(LineItemDecoration(requireContext(), 1))
         binding.recyclerView.setHasFixedSize(true)
     }
@@ -105,15 +107,6 @@ class OrdersFragment : Fragment() {
             }
         }
 
-    }
-
-    fun isPackageInstalled(context: Context, packageName: String): Boolean {
-        return try {
-            context.packageManager.getPackageInfo(packageName, PackageManager.GET_ACTIVITIES)
-            true
-        } catch (ex: Exception) {
-            false
-        }
     }
 
 

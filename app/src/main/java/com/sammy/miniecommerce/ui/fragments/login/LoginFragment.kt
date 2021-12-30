@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -29,6 +30,7 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = LoginFragmentBinding.inflate(layoutInflater, container, false)
+        (activity as AppCompatActivity).supportActionBar?.hide()
         return binding.root
     }
 
@@ -36,9 +38,9 @@ class LoginFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
         binding.btLogin.setOnClickListener {
-            Toast.makeText(requireContext(), getString(R.string.sign_in_success), Toast.LENGTH_SHORT).show()
             val intent = Intent(requireContext(), MainActivity::class.java)
             startActivity(intent)
+            Toast.makeText(requireContext(), getString(R.string.sign_in_success), Toast.LENGTH_SHORT).show()
         }
 
         binding.tvSignup.setOnClickListener {

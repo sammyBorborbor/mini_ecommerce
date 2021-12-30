@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/spacing_large"
+        tools:context=".ui.activity.PaymentSuccessActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/successful_transaction"
+                android:layout_gravity="center"
+                android:contentDescription="@null" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_large"/>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:text="@string/congratulations"
+                android:textAppearance="@style/Custom.Headings"
+                android:textSize="20sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tv_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/your_order_has_been_taken_and_being_attended_to"
+                android:textAppearance="@style/Custom.Body"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:gravity="center"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_track"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/track_order"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_continue"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/continue_shopping"/>
+
+    </RelativeLayout>
+</layout>

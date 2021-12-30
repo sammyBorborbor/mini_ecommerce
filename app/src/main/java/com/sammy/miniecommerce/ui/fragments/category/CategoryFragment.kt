@@ -97,6 +97,9 @@ class CategoryFragment : Fragment() {
         when (item.itemId) {
             R.id.action_cart -> {
                 findNavController().navigate(CategoryFragmentDirections.actionCategoryFragmentToCartFragment())
+                if (requireActivity() is MainActivity) {
+                    (activity as MainActivity?)!!.hideBottomNavigationView()
+                }
                 return true
             }
 

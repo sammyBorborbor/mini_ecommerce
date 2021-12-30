@@ -50,6 +50,10 @@ class CartFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
 
+        binding.btnCheckout.setOnClickListener {
+            findNavController().navigate(CartFragmentDirections.actionCartFragmentToCheckoutFragment())
+        }
+
         lifecycleScope.launch {
             viewModel.getProducts().observe(viewLifecycleOwner, { list ->
                 cartAdapter = CartAdapter(requireContext(), list)
@@ -64,7 +68,7 @@ class CartFragment : Fragment() {
 
     private fun setUpRecyclerView() {
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-        binding.recyclerView.addItemDecoration(LineItemDecoration(requireContext(), 1))
+//        binding.recyclerView.addItemDecoration(LineItemDecoration(requireContext(), 1))
         binding.recyclerView.setHasFixedSize(true)
     }
 

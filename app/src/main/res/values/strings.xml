@@ -31,4 +31,34 @@
     <string name="already_have_an_account">Already have an account?</string>
     <string name="sign_in_success">Sign in successful</string>
     <string name="sign_up_successful">Sign up successful</string>
+    <string name="total_ghs_20_00">GHS 250.00</string>
+    <string name="search_categories">Search Categories</string>
+    <string name="search_products">Search Products</string>
+    <string name="add_to_wishlist">Add To Wishlist</string>
+    <string name="quantity">Quantity</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum dui faucibus in ornare quam. Elementum nisi quis eleifend quam adipiscing vitae proin sagittis nisl. Nunc lobortis mattis aliquam faucibus purus in massa tempor nec. Dolor morbi non arcu risus quis varius quam. Elementum pulvinar etiam non quam lacus suspendisse. Auctor urna nunc id cursus. Proin fermentum leo vel orci porta non pulvinar neque laoreet. Id eu nisl nunc mi ipsum faucibus. Morbi enim nunc faucibus a pellentesque. Fermentum odio eu feugiat pretium nibh ipsum. Sit amet dictum sit amet justo donec. Tristique magna sit amet purus gravida quis blandit. Vulputate odio ut enim blandit volutpat. Id diam vel quam elementum pulvinar etiam non quam lacus. In aliquam sem fringilla ut morbi. Purus faucibus ornare suspendisse sed nisi lacus sed viverra. Mi proin sed libero enim sed faucibus turpis. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec. Aliquet enim tortor at auctor urna.</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="amount">Amount:&#160;</string>
+    <string name="place_order">Place Order</string>
+    <string name="nii_kwafio_street_sraha_police_station">Nii Kwafio Street, Sraha Police Station</string>
+    <string name="order_items">Order Items</string>
+    <string name="subtotal">Sub Total</string>
+    <string name="delivery_charge">Delivery Charge</string>
+    <string name="ghs_10_00">GHS 10.00</string>
+    <string name="payment_options">Payment Options</string>
+    <string name="cash_on_delivery">Cash on Delivery</string>
+    <string name="online">Online</string>
+    <string name="default1">Default</string>
+    <string name="change">Change</string>
+    <string name="delivery_address">Delivery Address</string>
+    <string name="debit_cards">Debit Cards</string>
+    <string name="one_item">1 Item</string>
+    <string name="go_home">Go Home</string>
+    <string name="congratulations">Congratulations!!!</string>
+    <string name="your_order_has_been_taken_and_being_attended_to">Your order has been taken and being attended to</string>
+    <string name="continue_shopping">Continue Shopping</string>
+    <string name="track_order">Track Order</string>
+    <string name="order_success">Order Success</string>
+
+
 </resources>

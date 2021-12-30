@@ -1,5 +1,8 @@
 package com.sammy.miniecommerce.bindingadapters
 
+import android.content.res.ColorStateList
+import android.graphics.Color
+import android.graphics.PorterDuff
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -33,11 +36,33 @@ class ProductBinding {
                 "pending" -> {
                     view.setBackgroundResource(R.drawable.pending_bg)
                 }
-                "in progress" -> {
+                "processing" -> {
                     view.setBackgroundResource(R.drawable.progress_bg)
                 }
                 else -> {
                     view.setBackgroundResource(R.drawable.success_bg)
+                }
+            }
+        }
+
+        @BindingAdapter("applyStatusTintColor")
+        @JvmStatic
+        fun applyStatusTintColor(view: View, status: String) {
+            when (status) {
+                "pending" -> {
+                    view.backgroundTintList = ColorStateList.valueOf(
+                        ContextCompat.getColor(view.context, R.color.confirmed)
+                    )
+                }
+                "processing" -> {
+                    view.backgroundTintList = ColorStateList.valueOf(
+                        ContextCompat.getColor(view.context, R.color.processing)
+                    )
+                }
+                else -> {
+                    view.backgroundTintList = ColorStateList.valueOf(
+                        ContextCompat.getColor(view.context, R.color.completed)
+                    )
                 }
             }
         }

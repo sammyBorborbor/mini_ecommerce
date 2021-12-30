@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.sammy.miniecommerce.R
 import com.sammy.miniecommerce.databinding.HomeFragmentBinding
+import com.sammy.miniecommerce.ui.activities.MainActivity
 import com.sammy.miniecommerce.ui.fragments.products.ProductsFragmentDirections
 
 class HomeFragment : Fragment() {
@@ -49,6 +50,9 @@ class HomeFragment : Fragment() {
         when (item.itemId) {
             R.id.action_cart -> {
                 findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToCartFragment())
+                if (requireActivity() is MainActivity) {
+                    (activity as MainActivity?)!!.hideBottomNavigationView()
+                }
                 return true
             }
 

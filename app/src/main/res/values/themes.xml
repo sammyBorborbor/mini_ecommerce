@@ -14,7 +14,7 @@
         <!-- Customize your theme here. -->
         <item name="android:windowDisablePreview">true</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:windowBackground">@color/white</item>
+<!--        <item name="android:windowBackground">@color/white</item>-->
         <item name="fontFamily">@font/open_sans</item>
 
     </style>

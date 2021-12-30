@@ -4,6 +4,12 @@
 ***
 A UI based mobile app displaying screens from Sign In to Checkout. There is no backend connected to this app.
 
+## Technologies
+***
+A list of technologies used within the project:
+* [Kotlin](https://kotlinlang.org/)
+* [XML]
+
 ## Installation
 *** 
 ```

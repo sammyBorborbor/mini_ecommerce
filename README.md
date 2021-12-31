@@ -3,8 +3,10 @@
 ## Description
 ***
 A UI based mobile app displaying screens from Sign In to Checkout. There is no backend connected to this app.
+Bottom navigation bar was used instead of a drawer navigation for easier access to pages/screens. It included the home, categories and orders screens.
+The home screen comprised of new arrivals section which is scrollable horizontally. The top categories is also scrollable horizontally.
+The all products section is another section on the home screen. Products were displayed in grid format and scrollable vertically.
 Categories and products were displayed on cards to make it more visible for the user to interact with.
-Also, bottom navigation bar was used instead of a drawer navigation for easier access to pages/screens.
 
 The product detail screen displays a carousel for more than one product images.
 The product detail screen included a quantity section for the user to specify the quantity of the product he/she is ordering. Also an option to add the product to your wishlist is being displayed beside the add to cart button. Add to cart and add to wishlist buttons were grouped together they have similar functionalities. 

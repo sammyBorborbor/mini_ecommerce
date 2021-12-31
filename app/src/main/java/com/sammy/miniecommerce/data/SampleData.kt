@@ -51,7 +51,7 @@ class SampleData {
                 price = 20.00,
                 description = lorem,
                 new = false,
-                images = listOf("https://image.freepik.com/free-photo/women-bag_1159-798.jpg"),
+                images = listOf("https://image.freepik.com/free-photo/women-bag_1159-798.jpg", "https://image.freepik.com/free-photo/pair-trainers_144627-3799.jpg"),
                 variation = ""
             )
             val product1 = Product(
@@ -59,7 +59,7 @@ class SampleData {
                 price = 20.00,
                 description = lorem,
                 new = true,
-                images = listOf("https://image.freepik.com/free-photo/pair-trainers_144627-3799.jpg"),
+                images = listOf("https://image.freepik.com/free-photo/pair-trainers_144627-3799.jpg", "https://image.freepik.com/free-photo/women-bag_1159-798.jpg"),
                 variation = ""
             )
             val product2 = Product(
@@ -67,7 +67,7 @@ class SampleData {
                 price = 20.00,
                 description = lorem,
                 new = false,
-                images = listOf("https://image.freepik.com/free-photo/shoes_1303-3601.jpg"),
+                images = listOf("https://image.freepik.com/free-photo/shoes_1303-3601.jpg", "https://image.freepik.com/free-photo/shoes_1303-3601.jpg"),
                 variation = ""
             )
             val product3 = Product(
@@ -75,7 +75,7 @@ class SampleData {
                 price = 20.00,
                 description = lorem,
                 new = false,
-                images = listOf("https://image.freepik.com/free-photo/beautiful-luxury-necklace-jewelry-stand-neck_1339-7950.jpg"),
+                images = listOf("https://image.freepik.com/free-photo/beautiful-luxury-necklace-jewelry-stand-neck_1339-7950.jpg", "https://image.freepik.com/free-photo/beautiful-luxury-necklace-jewelry-stand-neck_1339-7950.jpg"),
                 variation = ""
             )
             val product4 = Product(
@@ -99,7 +99,7 @@ class SampleData {
                 price = 20.00,
                 description = lorem,
                 new = false,
-                images = listOf("https://image.freepik.com/free-photo/color-purple-elegance-woman-luxury_1203-6518.jpg"),
+                images = listOf("https://image.freepik.com/free-photo/color-purple-elegance-woman-luxury_1203-6518.jpg", "https://image.freepik.com/free-photo/color-purple-elegance-woman-luxury_1203-6518.jpg"),
                 variation = ""
             )
             val product7 = Product(
@@ -107,7 +107,7 @@ class SampleData {
                 price = 20.00,
                 description = lorem,
                 new = false,
-                images = listOf("https://image.freepik.com/free-psd/floral-bagpack-mock-up_1310-136.jpg"),
+                images = listOf("https://image.freepik.com/free-psd/floral-bagpack-mock-up_1310-136.jpg", "https://image.freepik.com/free-psd/floral-bagpack-mock-up_1310-136.jpg"),
                 variation = ""
             )
             productList.value = (listOf(product, product1, product2, product3, product4, product5, product6, product7))

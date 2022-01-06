@@ -65,6 +65,7 @@
                         android:inputType="text"
                         android:importantForAutofill="no" />
 
+
                 </LinearLayout>
 
                 <View
@@ -113,15 +114,34 @@
                         android:layout_marginBottom="@dimen/spacing_medium"
                         android:text="@string/phone_number"/>
 
-                    <EditText
-                        android:id="@+id/etPhone"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:minHeight="@dimen/spacing_xmlarge"
-                        android:labelFor="@+id/phoneLabel"
-                        style="@style/EditText.Default"
-                        android:inputType="phone"
-                        android:importantForAutofill="no" />
+                        android:orientation="horizontal"
+                        android:background="@drawable/edit_text_bg">
+
+                        <TextView
+                            android:id="@+id/tvCountryCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Custom.Body.Bold"
+                            android:layout_marginBottom="@dimen/spacing_medium"
+                            android:text="+233"
+                            android:paddingHorizontal="@dimen/spacing_large"/>
+
+                        <EditText
+                            android:id="@+id/etPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="@dimen/spacing_xmlarge"
+                            android:labelFor="@+id/phoneLabel"
+                            style="@style/EditText.NoBackground"
+                            android:inputType="phone"
+                            android:importantForAutofill="no" />
+
+                    </LinearLayout>
+
+
 
                 </LinearLayout>
 

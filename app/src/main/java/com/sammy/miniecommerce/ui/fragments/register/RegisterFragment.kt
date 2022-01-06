@@ -2,6 +2,7 @@ package com.sammy.miniecommerce.ui.fragments.register
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -35,13 +36,30 @@ class RegisterFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(RegisterViewModel::class.java)
 
         binding.btSignup.setOnClickListener {
-            Toast.makeText(requireContext(), getString(R.string.sign_up_successful), Toast.LENGTH_SHORT).show()
-            val intent = Intent(requireContext(), MainActivity::class.java)
-            startActivity(intent)
+//            Toast.makeText(requireContext(), getString(R.string.sign_up_successful), Toast.LENGTH_SHORT).show()
+//            val intent = Intent(requireContext(), MainActivity::class.java)
+//            startActivity(intent)
+            validatePhoneNumber(binding.etPhone.text.toString())
+
         }
 
         binding.tvSignin.setOnClickListener {
             requireActivity().onBackPressed()
+        }
+
+    }
+
+
+    fun validatePhoneNumber(phoneNumber: String) {
+
+        val countryCode = binding.tvCountryCode.text.toString()
+        if(phoneNumber.startsWith("0") && phoneNumber.length == 10) {
+            Log.d("TEST", "$countryCode${phoneNumber.drop(1)}")
+        } else if(!phoneNumber.startsWith("0") && phoneNumber.length == 9) {
+            Log.d("TEST", "$countryCode$phoneNumber")
+        }
+        else {
+            Log.d("TEST", "Phone number is incorrect.")
         }
 
     }
